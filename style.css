@@ -200,7 +200,7 @@ header {
 @media (max-width: 991px) {
   .main {
     min-height: 100vh;
-    padding: 40px;
+    padding: 30px;
   }
 
   header {
@@ -208,7 +208,7 @@ header {
   }
 
   .content {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .content h2 {
@@ -317,7 +317,7 @@ header {
   }
 
   .bike {
-    max-width: 100%;
+    max-width: 60%;
     margin-top: 30px;
   }
 
