@@ -199,7 +199,7 @@ header {
 /* Responsive */
 @media (max-width: 991px) {
   .main {
-    min-height: 120vh;
+    min-height: 100vh;
     padding: 40px;
   }
 
@@ -207,19 +207,43 @@ header {
     padding: 20px 40px;
   }
 
-  .content{
+  .content {
     margin-top: 0px;
   }
 
-  .content h2{
+  .content h2 {
     font-size: 3em;
   }
 
-  .navigation{
+  .navigation {
     display: none;
   }
 
-  .toggle{
+  .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    background-color: var(--black);
+  }
+
+  /* .navigation li{
+    margin-bottom: 20px;
+  } */
+
+  .navigation li a {
+    font-size: 1.5em;
+    margin: 10px 0;
+    display: inline-block;
+  }
+
+  .toggle {
     position: relative;
     width: 32px;
     height: 40px;
@@ -231,8 +255,14 @@ header {
     z-index: 1000;
   }
 
-  .toggle::before{
-    content: '';
+  .toggle.active {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+  }
+
+  .toggle::before {
+    content: "";
     position: absolute;
     width: 100%;
     height: 2px;
@@ -242,8 +272,13 @@ header {
     box-shadow: 0 10px 0 var(--white);
   }
 
-  .toggle::after{
-    content: '';
+  .toggle.active::before {
+    transform: translateY(0) rotate(45deg);
+    box-shadow: 0 0 0 var(--white);
+  }
+
+  .toggle::after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 2px;
@@ -252,13 +287,17 @@ header {
     transition: 0.25s;
   }
 
+  .toggle.active::after {
+    transform: translateY(0) rotate(-45deg);
+  }
+
   .slider {
     position: relative;
     width: 100%;
     height: 100px;
   }
 
-  .slider .slides{
+  .slider .slides {
     position: absolute;
     top: 50%;
     padding: 0;
@@ -268,30 +307,28 @@ header {
     align-items: center;
   }
 
-  .slider .slides h2{
+  .slider .slides h2 {
     font-size: 2.5em;
     text-align: center;
   }
 
-  .slider .slides h2:last-child{
+  .slider .slides h2:last-child {
     text-align: center;
   }
 
-  .bike{
+  .bike {
     max-width: 100%;
+    margin-top: 30px;
   }
 
-  .footer{
+  .footer {
     position: relative;
     margin-top: 130px;
     flex-direction: column-reverse;
     padding: 40px 40px;
   }
 
-  .sci{
-  margin-top: 40px;
+  .sci {
+    margin-top: 40px;
   }
-
-
-
 }

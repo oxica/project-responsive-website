@@ -1,5 +1,14 @@
 const slides = document.querySelectorAll('.slides');
 const dots = document.querySelectorAll('.dot');
+const toggle = document.querySelector('.toggle');
+
+const navigation = document.querySelector('.navigation');
+
+toggle.onclick = function(){
+    toggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+
+}
 
 function setActive(i){
     for(slide of slides)
